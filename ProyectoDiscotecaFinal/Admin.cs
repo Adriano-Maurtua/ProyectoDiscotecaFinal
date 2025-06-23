@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,6 +48,11 @@ namespace ProyectoDiscotecaFinal
             ReprogramarReserva reprograma = new ReprogramarReserva();
             reprograma.Show();
             this.Hide();
+        }
+
+        private void btnVolverAdmin_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

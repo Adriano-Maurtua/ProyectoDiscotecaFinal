@@ -124,6 +124,7 @@
             btnVolverAdmin.TabIndex = 5;
             btnVolverAdmin.Text = "VOLVER";
             btnVolverAdmin.UseVisualStyleBackColor = false;
+            btnVolverAdmin.Click += btnVolverAdmin_Click;
             // 
             // Admin
             // 

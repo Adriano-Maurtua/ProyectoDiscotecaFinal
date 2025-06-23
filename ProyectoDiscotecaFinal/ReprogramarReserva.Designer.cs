@@ -41,6 +41,7 @@
             btnBox7 = new Button();
             btnBox8 = new Button();
             btnReservar = new Button();
+            btnVerificarFecha = new Button();
             SuspendLayout();
             // 
             // txtNroComprobante
@@ -68,12 +69,13 @@
             btnVerificar.FlatAppearance.MouseOverBackColor = Color.Red;
             btnVerificar.FlatStyle = FlatStyle.Flat;
             btnVerificar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnVerificar.Location = new Point(114, 55);
+            btnVerificar.Location = new Point(117, 55);
             btnVerificar.Name = "btnVerificar";
             btnVerificar.Size = new Size(75, 23);
             btnVerificar.TabIndex = 2;
             btnVerificar.Text = "Verificar";
             btnVerificar.UseVisualStyleBackColor = false;
+            btnVerificar.Click += btnVerificar_Click;
             // 
             // monthCalendarReprogramar
             // 
@@ -206,12 +208,28 @@
             btnReservar.BackColor = SystemColors.ButtonHighlight;
             btnReservar.FlatStyle = FlatStyle.Flat;
             btnReservar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnReservar.Location = new Point(136, 206);
+            btnReservar.Location = new Point(136, 200);
             btnReservar.Name = "btnReservar";
             btnReservar.Size = new Size(75, 23);
             btnReservar.TabIndex = 12;
             btnReservar.Text = "RESERVAR";
             btnReservar.UseVisualStyleBackColor = false;
+            btnReservar.Click += btnReservar_Click;
+            // 
+            // btnVerificarFecha
+            // 
+            btnVerificarFecha.BackColor = Color.White;
+            btnVerificarFecha.FlatAppearance.MouseDownBackColor = Color.Red;
+            btnVerificarFecha.FlatAppearance.MouseOverBackColor = Color.Red;
+            btnVerificarFecha.FlatStyle = FlatStyle.Flat;
+            btnVerificarFecha.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVerificarFecha.Location = new Point(446, 200);
+            btnVerificarFecha.Name = "btnVerificarFecha";
+            btnVerificarFecha.Size = new Size(103, 23);
+            btnVerificarFecha.TabIndex = 13;
+            btnVerificarFecha.Text = "Verificar Disp";
+            btnVerificarFecha.UseVisualStyleBackColor = false;
+            btnVerificarFecha.Click += btnVerificarFecha_Click;
             // 
             // ReprogramarReserva
             // 
@@ -219,6 +237,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(648, 271);
+            Controls.Add(btnVerificarFecha);
             Controls.Add(btnReservar);
             Controls.Add(btnBox8);
             Controls.Add(btnBox7);
@@ -254,5 +273,6 @@
         private Button btnBox7;
         private Button btnBox8;
         private Button btnReservar;
+        private Button btnVerificarFecha;
     }
 }
