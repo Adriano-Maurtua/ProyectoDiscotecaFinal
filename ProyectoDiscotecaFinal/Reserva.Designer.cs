@@ -101,6 +101,7 @@
             checkB.TabIndex = 10;
             checkB.Text = "Zona B";
             checkB.UseVisualStyleBackColor = true;
+            checkB.CheckedChanged += checkB_CheckedChanged;
             // 
             // checkA
             // 
@@ -113,6 +114,7 @@
             checkA.TabIndex = 11;
             checkA.Text = "Zona A";
             checkA.UseVisualStyleBackColor = true;
+            checkA.CheckedChanged += checkA_CheckedChanged;
             // 
             // checkC
             // 
@@ -125,6 +127,7 @@
             checkC.TabIndex = 12;
             checkC.Text = "Zona C";
             checkC.UseVisualStyleBackColor = true;
+            checkC.CheckedChanged += checkC_CheckedChanged;
             // 
             // label1
             // 

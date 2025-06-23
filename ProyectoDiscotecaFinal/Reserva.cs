@@ -43,5 +43,34 @@ namespace ProyectoDiscotecaFinal
             Integrantes formIntegrantes = new Integrantes(cantidad);
             formIntegrantes.Show();
         }
+
+        private void checkA_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkA.Checked)
+            {
+                checkB.Checked = false;
+                checkC.Checked = false;
+            }
+
+        }
+
+        private void checkB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkB.Checked)
+            {
+                checkA.Checked = false;
+                checkC.Checked = false;
+            }
+        }
+
+        private void checkC_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkC.Checked)
+            {
+                checkA.Checked = false;
+                checkB.Checked = false;
+            }
+        }
     }
 }

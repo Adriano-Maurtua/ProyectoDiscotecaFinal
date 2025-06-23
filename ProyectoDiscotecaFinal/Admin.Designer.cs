@@ -30,33 +30,35 @@
         {
             btnMantenedorCliente = new Button();
             btnReprogramar = new Button();
-            btnPromocion = new Button();
+            btnMantenedorPromocion = new Button();
             label1 = new Label();
+            btnMantenedorZona = new Button();
             SuspendLayout();
             // 
             // btnMantenedorCliente
             // 
-            btnMantenedorCliente.BackColor = Color.Black;
+            btnMantenedorCliente.BackColor = Color.White;
             btnMantenedorCliente.FlatAppearance.MouseDownBackColor = Color.Fuchsia;
             btnMantenedorCliente.FlatAppearance.MouseOverBackColor = Color.Fuchsia;
             btnMantenedorCliente.FlatStyle = FlatStyle.Flat;
             btnMantenedorCliente.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnMantenedorCliente.ForeColor = Color.White;
+            btnMantenedorCliente.ForeColor = Color.Black;
             btnMantenedorCliente.Location = new Point(12, 86);
             btnMantenedorCliente.Name = "btnMantenedorCliente";
             btnMantenedorCliente.Size = new Size(137, 56);
             btnMantenedorCliente.TabIndex = 0;
             btnMantenedorCliente.Text = "Mantenedor Cliente";
             btnMantenedorCliente.UseVisualStyleBackColor = false;
+            btnMantenedorCliente.Click += btnMantenedorCliente_Click;
             // 
             // btnReprogramar
             // 
-            btnReprogramar.BackColor = Color.Black;
+            btnReprogramar.BackColor = Color.White;
             btnReprogramar.FlatAppearance.MouseDownBackColor = Color.Fuchsia;
             btnReprogramar.FlatAppearance.MouseOverBackColor = Color.Fuchsia;
             btnReprogramar.FlatStyle = FlatStyle.Flat;
             btnReprogramar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnReprogramar.ForeColor = Color.White;
+            btnReprogramar.ForeColor = Color.Black;
             btnReprogramar.Location = new Point(171, 86);
             btnReprogramar.Name = "btnReprogramar";
             btnReprogramar.Size = new Size(137, 56);
@@ -64,38 +66,56 @@
             btnReprogramar.Text = "Reprogramar Reserva";
             btnReprogramar.UseVisualStyleBackColor = false;
             // 
-            // btnPromocion
+            // btnMantenedorPromocion
             // 
-            btnPromocion.BackColor = Color.Black;
-            btnPromocion.FlatAppearance.MouseDownBackColor = Color.Fuchsia;
-            btnPromocion.FlatAppearance.MouseOverBackColor = Color.Fuchsia;
-            btnPromocion.FlatStyle = FlatStyle.Flat;
-            btnPromocion.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnPromocion.ForeColor = Color.White;
-            btnPromocion.Location = new Point(331, 86);
-            btnPromocion.Name = "btnPromocion";
-            btnPromocion.Size = new Size(137, 56);
-            btnPromocion.TabIndex = 2;
-            btnPromocion.Text = "Mantenedor Promocion";
-            btnPromocion.UseVisualStyleBackColor = false;
+            btnMantenedorPromocion.BackColor = Color.White;
+            btnMantenedorPromocion.FlatAppearance.MouseDownBackColor = Color.Fuchsia;
+            btnMantenedorPromocion.FlatAppearance.MouseOverBackColor = Color.Fuchsia;
+            btnMantenedorPromocion.FlatStyle = FlatStyle.Flat;
+            btnMantenedorPromocion.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnMantenedorPromocion.ForeColor = Color.Black;
+            btnMantenedorPromocion.Location = new Point(331, 86);
+            btnMantenedorPromocion.Name = "btnMantenedorPromocion";
+            btnMantenedorPromocion.Size = new Size(137, 56);
+            btnMantenedorPromocion.TabIndex = 2;
+            btnMantenedorPromocion.Text = "Mantenedor Promocion";
+            btnMantenedorPromocion.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(123, 21);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(221, 21);
             label1.Name = "label1";
             label1.Size = new Size(247, 37);
             label1.TabIndex = 3;
             label1.Text = "ADMINISTRADOR";
             // 
+            // btnMantenedorZona
+            // 
+            btnMantenedorZona.BackColor = Color.White;
+            btnMantenedorZona.FlatAppearance.MouseDownBackColor = Color.Fuchsia;
+            btnMantenedorZona.FlatAppearance.MouseOverBackColor = Color.Fuchsia;
+            btnMantenedorZona.FlatStyle = FlatStyle.Flat;
+            btnMantenedorZona.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnMantenedorZona.ForeColor = Color.Black;
+            btnMantenedorZona.Location = new Point(498, 86);
+            btnMantenedorZona.Name = "btnMantenedorZona";
+            btnMantenedorZona.Size = new Size(137, 56);
+            btnMantenedorZona.TabIndex = 4;
+            btnMantenedorZona.Text = "Mantenedor Zona Box";
+            btnMantenedorZona.UseVisualStyleBackColor = false;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(493, 195);
+            BackColor = SystemColors.ActiveCaptionText;
+            ClientSize = new Size(669, 195);
+            Controls.Add(btnMantenedorZona);
             Controls.Add(label1);
-            Controls.Add(btnPromocion);
+            Controls.Add(btnMantenedorPromocion);
             Controls.Add(btnReprogramar);
             Controls.Add(btnMantenedorCliente);
             Name = "Admin";
@@ -108,7 +128,8 @@
 
         private Button btnMantenedorCliente;
         private Button btnReprogramar;
-        private Button btnPromocion;
+        private Button btnMantenedorPromocion;
         private Label label1;
+        private Button btnMantenedorZona;
     }
 }

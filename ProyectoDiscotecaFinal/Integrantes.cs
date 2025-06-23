@@ -21,6 +21,17 @@ namespace ProyectoDiscotecaFinal
         {
             int espacioY = 20;
 
+            Label lblTitulo = new Label();
+            lblTitulo.Text = "Ingresar Nombre Completo de Integrantes";
+            lblTitulo.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            lblTitulo.AutoSize = true;
+            lblTitulo.Location = new Point(30, espacioY);
+            lblTitulo.ForeColor = Color.White; // Si tu fondo es oscuro
+            this.Controls.Add(lblTitulo);
+
+            espacioY += 40; // Espacio después del título
+
+
             for (int i = 1; i <= cantidad; i++)
             {
                 // Etiqueta izquierda fija: "Integrante N"
@@ -28,6 +39,7 @@ namespace ProyectoDiscotecaFinal
                 lblNumero.Text = $"Integrante {i}";
                 lblNumero.AutoSize = true;
                 lblNumero.Location = new Point(30, espacioY);
+                lblNumero.ForeColor = Color.White;
                 this.Controls.Add(lblNumero);
 
                 // TextBox donde se escribirá el nombre

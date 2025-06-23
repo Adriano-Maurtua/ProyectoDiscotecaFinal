@@ -16,5 +16,15 @@ namespace ProyectoDiscotecaFinal
         {
             InitializeComponent();
         }
+
+        private void btnMantenedorCliente_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Oculta el formulario Admin
+
+            MantenedorCliente frm = new MantenedorCliente();
+            frm.ShowDialog(); // Muestra MantenedorCliente de forma modal
+
+            this.Show(); // Vuelve a mostrar Admin cuando se cierre el otro
+        }
     }
 }

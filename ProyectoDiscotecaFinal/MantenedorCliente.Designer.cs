@@ -32,15 +32,15 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtDocumento = new TextBox();
+            txtNombreCompleto = new TextBox();
             btnRegistrar = new Button();
             cboGenero = new ComboBox();
             cboCategoria = new ComboBox();
-            btnModificar = new Button();
             btnEliminar = new Button();
+            btnModificar = new Button();
             label5 = new Label();
-            textBox4 = new TextBox();
+            txtTelefono = new TextBox();
             dataGridView1 = new DataGridView();
             NroDocumento = new DataGridViewTextBoxColumn();
             Telefono = new DataGridViewTextBoxColumn();
@@ -86,19 +86,19 @@
             label4.TabIndex = 3;
             label4.Text = "Categoria Cliente:";
             // 
-            // textBox1
+            // txtDocumento
             // 
-            textBox1.Location = new Point(180, 44);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(248, 23);
-            textBox1.TabIndex = 4;
+            txtDocumento.Location = new Point(180, 44);
+            txtDocumento.Name = "txtDocumento";
+            txtDocumento.Size = new Size(248, 23);
+            txtDocumento.TabIndex = 4;
             // 
-            // textBox2
+            // txtNombreCompleto
             // 
-            textBox2.Location = new Point(180, 85);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(248, 23);
-            textBox2.TabIndex = 5;
+            txtNombreCompleto.Location = new Point(180, 85);
+            txtNombreCompleto.Name = "txtNombreCompleto";
+            txtNombreCompleto.Size = new Size(248, 23);
+            txtNombreCompleto.TabIndex = 5;
             // 
             // btnRegistrar
             // 
@@ -132,33 +132,33 @@
             cboCategoria.Size = new Size(121, 23);
             cboCategoria.TabIndex = 11;
             // 
-            // btnModificar
-            // 
-            btnModificar.BackColor = Color.Red;
-            btnModificar.Cursor = Cursors.Hand;
-            btnModificar.FlatStyle = FlatStyle.Flat;
-            btnModificar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnModificar.ForeColor = SystemColors.ButtonHighlight;
-            btnModificar.Location = new Point(96, 339);
-            btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(178, 26);
-            btnModificar.TabIndex = 12;
-            btnModificar.Text = "Eliminar";
-            btnModificar.UseVisualStyleBackColor = false;
-            // 
             // btnEliminar
             // 
-            btnEliminar.BackColor = Color.Blue;
+            btnEliminar.BackColor = Color.Red;
             btnEliminar.Cursor = Cursors.Hand;
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnEliminar.ForeColor = SystemColors.ButtonHighlight;
-            btnEliminar.Location = new Point(96, 310);
+            btnEliminar.Location = new Point(96, 339);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(178, 26);
-            btnEliminar.TabIndex = 13;
-            btnEliminar.Text = "Modificar";
+            btnEliminar.TabIndex = 12;
+            btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnModificar
+            // 
+            btnModificar.BackColor = Color.Blue;
+            btnModificar.Cursor = Cursors.Hand;
+            btnModificar.FlatStyle = FlatStyle.Flat;
+            btnModificar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnModificar.ForeColor = SystemColors.ButtonHighlight;
+            btnModificar.Location = new Point(96, 310);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(178, 26);
+            btnModificar.TabIndex = 13;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -169,12 +169,12 @@
             label5.TabIndex = 15;
             label5.Text = "Telefono";
             // 
-            // textBox4
+            // txtTelefono
             // 
-            textBox4.Location = new Point(180, 126);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(248, 23);
-            textBox4.TabIndex = 16;
+            txtTelefono.Location = new Point(180, 126);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(248, 23);
+            txtTelefono.TabIndex = 16;
             // 
             // dataGridView1
             // 
@@ -221,21 +221,22 @@
             BackColor = Color.White;
             ClientSize = new Size(1235, 400);
             Controls.Add(dataGridView1);
-            Controls.Add(textBox4);
+            Controls.Add(txtTelefono);
             Controls.Add(label5);
-            Controls.Add(btnEliminar);
             Controls.Add(btnModificar);
+            Controls.Add(btnEliminar);
             Controls.Add(cboCategoria);
             Controls.Add(cboGenero);
             Controls.Add(btnRegistrar);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtNombreCompleto);
+            Controls.Add(txtDocumento);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "MantenedorCliente";
             Text = "Mantenedor Cliente";
+            Load += MantenedorCliente_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -247,15 +248,15 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtDocumento;
+        private TextBox txtNombreCompleto;
         private Button btnRegistrar;
         private ComboBox cboGenero;
         private ComboBox cboCategoria;
-        private Button btnModificar;
         private Button btnEliminar;
+        private Button btnModificar;
         private Label label5;
-        private TextBox textBox4;
+        private TextBox txtTelefono;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn NroDocumento;
         private DataGridViewTextBoxColumn Telefono;
