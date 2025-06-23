@@ -32,6 +32,7 @@
             btnVendedor = new Button();
             label1 = new Label();
             label2 = new Label();
+            domainUpDown1 = new DomainUpDown();
             SuspendLayout();
             // 
             // btnAdmin
@@ -84,12 +85,21 @@
             label2.TabIndex = 3;
             label2.Text = "Selecciona tu cargo:";
             // 
+            // domainUpDown1
+            // 
+            domainUpDown1.Location = new Point(147, 212);
+            domainUpDown1.Name = "domainUpDown1";
+            domainUpDown1.Size = new Size(120, 23);
+            domainUpDown1.TabIndex = 4;
+            domainUpDown1.Text = "domainUpDown1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(319, 267);
+            Controls.Add(domainUpDown1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnVendedor);
@@ -106,5 +116,6 @@
         private Button btnVendedor;
         private Label label1;
         private Label label2;
+        private DomainUpDown domainUpDown1;
     }
 }

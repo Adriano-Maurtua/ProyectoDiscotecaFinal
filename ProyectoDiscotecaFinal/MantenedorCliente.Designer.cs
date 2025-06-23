@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            dataGridView1 = new DataGridView();
             btnRegistrar = new Button();
             cboGenero = new ComboBox();
             cboCategoria = new ComboBox();
@@ -45,15 +42,6 @@
             txtId = new TextBox();
             label5 = new Label();
             textBox4 = new TextBox();
-            btnSeleccionar = new DataGridViewButtonColumn();
-            Clave = new DataGridViewTextBoxColumn();
-            EstadoValor = new DataGridViewTextBoxColumn();
-            NroDocumento = new DataGridViewTextBoxColumn();
-            NombreCompleto = new DataGridViewTextBoxColumn();
-            Telefono = new DataGridViewTextBoxColumn();
-            Genero = new DataGridViewTextBoxColumn();
-            CategoriaCliente = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -105,32 +93,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(248, 23);
             textBox2.TabIndex = 5;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, Clave, EstadoValor, NroDocumento, NombreCompleto, Telefono, Genero, CategoriaCliente });
-            dataGridView1.Location = new Point(470, 44);
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle2.SelectionBackColor = Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.RowTemplate.Height = 28;
-            dataGridView1.Size = new Size(680, 371);
-            dataGridView1.TabIndex = 8;
-            dataGridView1.CellContentClick += this.dataGridView1_CellContentClick;
             // 
             // btnRegistrar
             // 
@@ -216,59 +178,6 @@
             textBox4.Size = new Size(248, 23);
             textBox4.TabIndex = 16;
             // 
-            // btnSeleccionar
-            // 
-            btnSeleccionar.HeaderText = "";
-            btnSeleccionar.Name = "btnSeleccionar";
-            btnSeleccionar.ReadOnly = true;
-            btnSeleccionar.Width = 30;
-            // 
-            // Clave
-            // 
-            Clave.HeaderText = "Clave";
-            Clave.Name = "Clave";
-            Clave.ReadOnly = true;
-            Clave.Visible = false;
-            // 
-            // EstadoValor
-            // 
-            EstadoValor.HeaderText = "EstadoValor";
-            EstadoValor.Name = "EstadoValor";
-            EstadoValor.ReadOnly = true;
-            EstadoValor.Visible = false;
-            // 
-            // NroDocumento
-            // 
-            NroDocumento.HeaderText = "Numero Documento";
-            NroDocumento.Name = "NroDocumento";
-            NroDocumento.ReadOnly = true;
-            // 
-            // NombreCompleto
-            // 
-            NombreCompleto.HeaderText = "Nombre Completo";
-            NombreCompleto.Name = "NombreCompleto";
-            NombreCompleto.ReadOnly = true;
-            NombreCompleto.Width = 180;
-            // 
-            // Telefono
-            // 
-            Telefono.HeaderText = "Telefono";
-            Telefono.Name = "Telefono";
-            Telefono.ReadOnly = true;
-            Telefono.Width = 125;
-            // 
-            // Genero
-            // 
-            Genero.HeaderText = "Genero";
-            Genero.Name = "Genero";
-            Genero.ReadOnly = true;
-            // 
-            // CategoriaCliente
-            // 
-            CategoriaCliente.HeaderText = "Categoria";
-            CategoriaCliente.Name = "CategoriaCliente";
-            CategoriaCliente.ReadOnly = true;
-            // 
             // MantenedorCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -283,7 +192,6 @@
             Controls.Add(cboCategoria);
             Controls.Add(cboGenero);
             Controls.Add(btnRegistrar);
-            Controls.Add(dataGridView1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label4);
@@ -292,7 +200,6 @@
             Controls.Add(label1);
             Name = "MantenedorCliente";
             Text = "Mantendor Cliente";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -305,7 +212,6 @@
         private Label label4;
         private TextBox textBox1;
         private TextBox textBox2;
-        private DataGridView dataGridView1;
         private Button btnRegistrar;
         private ComboBox cboGenero;
         private ComboBox cboCategoria;
@@ -314,13 +220,5 @@
         private TextBox txtId;
         private Label label5;
         private TextBox textBox4;
-        private DataGridViewButtonColumn btnSeleccionar;
-        private DataGridViewTextBoxColumn Clave;
-        private DataGridViewTextBoxColumn EstadoValor;
-        private DataGridViewTextBoxColumn NroDocumento;
-        private DataGridViewTextBoxColumn NombreCompleto;
-        private DataGridViewTextBoxColumn Telefono;
-        private DataGridViewTextBoxColumn Genero;
-        private DataGridViewTextBoxColumn CategoriaCliente;
     }
 }
