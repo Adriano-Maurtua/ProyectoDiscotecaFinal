@@ -26,5 +26,20 @@ namespace ProyectoDiscotecaFinal
 
             this.Show(); // Vuelve a mostrar Admin cuando se cierre el otro
         }
+
+        private void btnMantenedorPromocion_Click(object sender, EventArgs e)
+        {
+            MantenedorProm frm = new MantenedorProm();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void btnMantenedorZona_Click(object sender, EventArgs e)
+        {
+                MantenedorZonaBox zonaForm = new MantenedorZonaBox();
+                zonaForm.Show();
+                this.Hide();
+            
+        }
     }
 }

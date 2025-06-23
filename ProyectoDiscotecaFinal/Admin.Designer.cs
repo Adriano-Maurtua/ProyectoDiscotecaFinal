@@ -80,6 +80,7 @@
             btnMantenedorPromocion.TabIndex = 2;
             btnMantenedorPromocion.Text = "Mantenedor Promocion";
             btnMantenedorPromocion.UseVisualStyleBackColor = false;
+            btnMantenedorPromocion.Click += btnMantenedorPromocion_Click;
             // 
             // label1
             // 
@@ -106,6 +107,7 @@
             btnMantenedorZona.TabIndex = 4;
             btnMantenedorZona.Text = "Mantenedor Zona Box";
             btnMantenedorZona.UseVisualStyleBackColor = false;
+            btnMantenedorZona.Click += btnMantenedorZona_Click;
             // 
             // Admin
             // 
