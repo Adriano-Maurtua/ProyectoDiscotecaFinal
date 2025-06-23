@@ -13,40 +13,32 @@ namespace ProyectoDiscotecaFinal
 {
     public partial class GeneradorQR : Form
     {
+        private string nroComprobante;
         public GeneradorQR()
         {
             InitializeComponent();
-            txtDatosQR.Text = datosReserva;
+            string comprobanteValido = "C12345678";
+            nroComprobante = comprobanteValido;
         }
 
         private void GeneradorQR_Load(object sender, EventArgs e)
         {
-            string datos = "Nombre: Juan Pérez\nZona: A\nBox: 2\nFecha: 25/06/2025\nComprobante: 123456";
 
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(datos, QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrCodeData);
-
-            Bitmap qrCodeImage = qrCode.GetGraphic(5);
-            pictureBoxQR.Image = qrCodeImage;
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            string contenido = txtDatosQR.Text;
+            if (string.IsNullOrEmpty(nroComprobante))
+            {
+                MessageBox.Show("No se ha proporcionado ningún número de comprobante.", "Error");
+                return;
+            }
+            QRCodeGenerator qrGen = new QRCodeGenerator();
+            QRCodeData qrData = qrGen.CreateQrCode(nroComprobante, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrData);
 
-            if (!string.IsNullOrWhiteSpace(contenido))
-            {
-                QRCodeGenerator qrGenerador = new QRCodeGenerator();
-                QRCodeData qrDatos = qrGenerador.CreateQrCode(contenido, QRCodeGenerator.ECCLevel.Q);
-                QRCode qrCodigo = new QRCode(qrDatos);
-                Bitmap qrImagen = qrCodigo.GetGraphic(10);
-                pictureBoxQR.Image = qrImagen;
-            }
-            else
-            {
-                MessageBox.Show("No hay datos para generar el código QR.");
-            }
+            Bitmap qrImage = qrCode.GetGraphic(10);
+            pictureBoxQR.Image = qrImage;
         }
     }
 }

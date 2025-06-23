@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             dataGridViewPromo = new DataGridView();
-            NombrePromocion = new DataGridViewTextBoxColumn();
-            Descuento = new DataGridViewTextBoxColumn();
-            FechaVencimiento = new DataGridViewTextBoxColumn();
-            CodigoPromocion = new DataGridViewTextBoxColumn();
             btnRegistrarProm = new Button();
             btnModificarProm = new Button();
             btnEliminarProm = new Button();
@@ -44,40 +40,22 @@
             dateTimePickerPromo = new DateTimePicker();
             label4 = new Label();
             txtCodigoPromocion = new TextBox();
+            CodigoPromocion = new DataGridViewTextBoxColumn();
+            NombrePromocion = new DataGridViewTextBoxColumn();
+            Descuento = new DataGridViewTextBoxColumn();
+            FechaVencimiento = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPromo).BeginInit();
             SuspendLayout();
             // 
             // dataGridViewPromo
             // 
             dataGridViewPromo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPromo.Columns.AddRange(new DataGridViewColumn[] { NombrePromocion, Descuento, FechaVencimiento, CodigoPromocion });
+            dataGridViewPromo.Columns.AddRange(new DataGridViewColumn[] { CodigoPromocion, NombrePromocion, Descuento, FechaVencimiento });
             dataGridViewPromo.Location = new Point(412, 20);
             dataGridViewPromo.Name = "dataGridViewPromo";
-            dataGridViewPromo.Size = new Size(497, 238);
+            dataGridViewPromo.Size = new Size(506, 238);
             dataGridViewPromo.TabIndex = 0;
             dataGridViewPromo.CellClick += dataGridViewPromo_CellClick;
-            // 
-            // NombrePromocion
-            // 
-            NombrePromocion.HeaderText = "Nombre Promocion";
-            NombrePromocion.Name = "NombrePromocion";
-            NombrePromocion.Width = 130;
-            // 
-            // Descuento
-            // 
-            Descuento.HeaderText = "Descuento";
-            Descuento.Name = "Descuento";
-            // 
-            // FechaVencimiento
-            // 
-            FechaVencimiento.HeaderText = "Fecha Vencimiento";
-            FechaVencimiento.Name = "FechaVencimiento";
-            // 
-            // CodigoPromocion
-            // 
-            CodigoPromocion.HeaderText = "CodigoPromocional";
-            CodigoPromocion.Name = "CodigoPromocion";
-            CodigoPromocion.Width = 120;
             // 
             // btnRegistrarProm
             // 
@@ -85,7 +63,7 @@
             btnRegistrarProm.ForeColor = Color.White;
             btnRegistrarProm.Location = new Point(134, 168);
             btnRegistrarProm.Name = "btnRegistrarProm";
-            btnRegistrarProm.Size = new Size(178, 26);
+            btnRegistrarProm.Size = new Size(187, 26);
             btnRegistrarProm.TabIndex = 5;
             btnRegistrarProm.Text = "Registrar";
             btnRegistrarProm.UseVisualStyleBackColor = false;
@@ -97,7 +75,7 @@
             btnModificarProm.ForeColor = Color.White;
             btnModificarProm.Location = new Point(134, 200);
             btnModificarProm.Name = "btnModificarProm";
-            btnModificarProm.Size = new Size(178, 26);
+            btnModificarProm.Size = new Size(187, 26);
             btnModificarProm.TabIndex = 6;
             btnModificarProm.Text = "Modificar";
             btnModificarProm.UseVisualStyleBackColor = false;
@@ -109,7 +87,7 @@
             btnEliminarProm.ForeColor = Color.White;
             btnEliminarProm.Location = new Point(134, 232);
             btnEliminarProm.Name = "btnEliminarProm";
-            btnEliminarProm.Size = new Size(178, 26);
+            btnEliminarProm.Size = new Size(187, 26);
             btnEliminarProm.TabIndex = 7;
             btnEliminarProm.Text = "Eliminar";
             btnEliminarProm.UseVisualStyleBackColor = false;
@@ -152,21 +130,21 @@
             // 
             txtNombrePromo.Location = new Point(167, 54);
             txtNombrePromo.Name = "txtNombrePromo";
-            txtNombrePromo.Size = new Size(212, 23);
+            txtNombrePromo.Size = new Size(221, 23);
             txtNombrePromo.TabIndex = 11;
             // 
             // txtDescuentoPromo
             // 
             txtDescuentoPromo.Location = new Point(167, 84);
             txtDescuentoPromo.Name = "txtDescuentoPromo";
-            txtDescuentoPromo.Size = new Size(79, 23);
+            txtDescuentoPromo.Size = new Size(88, 23);
             txtDescuentoPromo.TabIndex = 12;
             // 
             // dateTimePickerPromo
             // 
             dateTimePickerPromo.Location = new Point(167, 112);
             dateTimePickerPromo.Name = "dateTimePickerPromo";
-            dateTimePickerPromo.Size = new Size(212, 23);
+            dateTimePickerPromo.Size = new Size(221, 23);
             dateTimePickerPromo.TabIndex = 13;
             // 
             // label4
@@ -184,8 +162,30 @@
             // 
             txtCodigoPromocion.Location = new Point(167, 25);
             txtCodigoPromocion.Name = "txtCodigoPromocion";
-            txtCodigoPromocion.Size = new Size(212, 23);
+            txtCodigoPromocion.Size = new Size(221, 23);
             txtCodigoPromocion.TabIndex = 15;
+            // 
+            // CodigoPromocion
+            // 
+            CodigoPromocion.HeaderText = "CodigoPromocional";
+            CodigoPromocion.Name = "CodigoPromocion";
+            CodigoPromocion.Width = 120;
+            // 
+            // NombrePromocion
+            // 
+            NombrePromocion.HeaderText = "Nombre Promocion";
+            NombrePromocion.Name = "NombrePromocion";
+            NombrePromocion.Width = 130;
+            // 
+            // Descuento
+            // 
+            Descuento.HeaderText = "Descuento";
+            Descuento.Name = "Descuento";
+            // 
+            // FechaVencimiento
+            // 
+            FechaVencimiento.HeaderText = "Fecha Vencimiento";
+            FechaVencimiento.Name = "FechaVencimiento";
             // 
             // MantenedorProm
             // 
@@ -225,11 +225,11 @@
         private TextBox txtNombrePromo;
         private TextBox txtDescuentoPromo;
         private DateTimePicker dateTimePickerPromo;
+        private Label label4;
+        private TextBox txtCodigoPromocion;
+        private DataGridViewTextBoxColumn CodigoPromocion;
         private DataGridViewTextBoxColumn NombrePromocion;
         private DataGridViewTextBoxColumn Descuento;
         private DataGridViewTextBoxColumn FechaVencimiento;
-        private DataGridViewTextBoxColumn CodigoPromocion;
-        private Label label4;
-        private TextBox txtCodigoPromocion;
     }
 }

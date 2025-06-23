@@ -19,6 +19,13 @@ namespace ProyectoDiscotecaFinal
         {
             InitializeComponent();
 
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.DefaultCellStyle.BackColor = Color.White;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Blue;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
             if (!File.Exists(rutaArchivo))
             {
                 File.Create(rutaArchivo).Close();
@@ -80,12 +87,7 @@ namespace ProyectoDiscotecaFinal
                 nuevoCliente.Categoria
             );
 
-            // 6. Limpiar campos
-            txtDocumento.Clear();
-            txtNombreCompleto.Clear();
-            txtTelefono.Clear();
-            cboGenero.SelectedIndex = -1;
-            cboCategoria.SelectedIndex = -1;
+            LimpiarCampos();
 
 
         }
@@ -179,6 +181,7 @@ namespace ProyectoDiscotecaFinal
             }
 
             MessageBox.Show("Cliente modificado correctamente.");
+            LimpiarCampos();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -223,8 +226,17 @@ namespace ProyectoDiscotecaFinal
                 }
 
                 MessageBox.Show("Cliente eliminado correctamente.");
-                
+                LimpiarCampos();
+
             }
+        }
+        private void LimpiarCampos()
+        {
+            txtDocumento.Clear();
+            txtNombreCompleto.Clear();
+            txtTelefono.Clear();
+            cboGenero.SelectedIndex = -1;
+            cboCategoria.SelectedIndex = -1;
         }
     }
 }

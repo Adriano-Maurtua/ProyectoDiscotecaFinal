@@ -106,13 +106,17 @@ namespace ProyectoDiscotecaFinal
 
         private void btnReservar_Click(object sender, EventArgs e)
         {
-            string datosReserva = $"Fecha: {fechaSeleccionada}\n" +
-                         $"Zona: {zonaSeleccionada}\n" +
-                         $"Box: {boxSeleccionado}\n" +
-                         $"Comprobante: {txtNroComprobante.Text}";
+            string nro = txtNroComprobante.Text.Trim();
+
+            if (string.IsNullOrEmpty(nro))
+            {
+                MessageBox.Show("Ingresa un número de comprobante primero.");
+                return;
+            }
+
             GeneradorQR formQR = new GeneradorQR();
             formQR.Show();
-            this.Hide(); // Opcional: si quieres ocultar el actual
+            this.Hide(); 
         }
     }
 }

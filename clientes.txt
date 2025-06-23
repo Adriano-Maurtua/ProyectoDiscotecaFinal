@@ -1,2 +1,1 @@
-60799108|933428158|Adriano Perez Guyede|Masculino|Normal
-45678912|965124456|Juan Roman Riquelme|Masculino|Normal
+123456789|456879989|Juan Roman VARGAS|Masculino|VIP
