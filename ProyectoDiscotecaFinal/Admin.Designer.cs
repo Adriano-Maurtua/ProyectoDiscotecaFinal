@@ -33,6 +33,7 @@
             btnMantenedorPromocion = new Button();
             label1 = new Label();
             btnMantenedorZona = new Button();
+            btnVolverAdmin = new Button();
             SuspendLayout();
             // 
             // btnMantenedorCliente
@@ -65,6 +66,7 @@
             btnReprogramar.TabIndex = 1;
             btnReprogramar.Text = "Reprogramar Reserva";
             btnReprogramar.UseVisualStyleBackColor = false;
+            btnReprogramar.Click += btnReprogramar_Click;
             // 
             // btnMantenedorPromocion
             // 
@@ -109,18 +111,34 @@
             btnMantenedorZona.UseVisualStyleBackColor = false;
             btnMantenedorZona.Click += btnMantenedorZona_Click;
             // 
+            // btnVolverAdmin
+            // 
+            btnVolverAdmin.BackColor = Color.Red;
+            btnVolverAdmin.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 255);
+            btnVolverAdmin.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
+            btnVolverAdmin.FlatStyle = FlatStyle.Flat;
+            btnVolverAdmin.ForeColor = Color.White;
+            btnVolverAdmin.Location = new Point(572, 174);
+            btnVolverAdmin.Name = "btnVolverAdmin";
+            btnVolverAdmin.Size = new Size(75, 23);
+            btnVolverAdmin.TabIndex = 5;
+            btnVolverAdmin.Text = "VOLVER";
+            btnVolverAdmin.UseVisualStyleBackColor = false;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(669, 195);
+            ClientSize = new Size(669, 209);
+            Controls.Add(btnVolverAdmin);
             Controls.Add(btnMantenedorZona);
             Controls.Add(label1);
             Controls.Add(btnMantenedorPromocion);
             Controls.Add(btnReprogramar);
             Controls.Add(btnMantenedorCliente);
             Name = "Admin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin";
             ResumeLayout(false);
             PerformLayout();
@@ -133,5 +151,6 @@
         private Button btnMantenedorPromocion;
         private Label label1;
         private Button btnMantenedorZona;
+        private Button btnVolverAdmin;
     }
 }

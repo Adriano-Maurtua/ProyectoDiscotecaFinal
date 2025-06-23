@@ -64,18 +64,22 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ButtonHighlight;
             label1.Location = new Point(21, 48);
             label1.Name = "label1";
-            label1.Size = new Size(100, 15);
+            label1.Size = new Size(103, 15);
             label1.TabIndex = 1;
             label1.Text = "Nombre de Zona:";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ButtonHighlight;
             label2.Location = new Point(21, 79);
             label2.Name = "label2";
-            label2.Size = new Size(43, 15);
+            label2.Size = new Size(45, 15);
             label2.TabIndex = 2;
             label2.Text = "Precio:";
             // 
@@ -133,6 +137,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(644, 282);
             Controls.Add(btnEliminarZona);
             Controls.Add(btnModificarZona);

@@ -36,10 +36,17 @@ namespace ProyectoDiscotecaFinal
 
         private void btnMantenedorZona_Click(object sender, EventArgs e)
         {
-                MantenedorZonaBox zonaForm = new MantenedorZonaBox();
-                zonaForm.Show();
-                this.Hide();
-            
+            MantenedorZonaBox zonaForm = new MantenedorZonaBox();
+            zonaForm.Show();
+            this.Hide();
+
+        }
+
+        private void btnReprogramar_Click(object sender, EventArgs e)
+        {
+            ReprogramarReserva reprograma = new ReprogramarReserva();
+            reprograma.Show();
+            this.Hide();
         }
     }
 }

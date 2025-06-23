@@ -53,36 +53,44 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ButtonHighlight;
             label1.Location = new Point(31, 44);
             label1.Name = "label1";
-            label1.Size = new Size(96, 15);
+            label1.Size = new Size(100, 15);
             label1.TabIndex = 0;
             label1.Text = "Nro Documento:";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ButtonHighlight;
             label2.Location = new Point(31, 85);
             label2.Name = "label2";
-            label2.Size = new Size(110, 15);
+            label2.Size = new Size(113, 15);
             label2.TabIndex = 1;
             label2.Text = "Nombre Completo:";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.ButtonHighlight;
             label3.Location = new Point(31, 167);
             label3.Name = "label3";
-            label3.Size = new Size(48, 15);
+            label3.Size = new Size(52, 15);
             label3.TabIndex = 2;
             label3.Text = "Genero:";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label4.ForeColor = SystemColors.ButtonHighlight;
             label4.Location = new Point(31, 208);
             label4.Name = "label4";
-            label4.Size = new Size(101, 15);
+            label4.Size = new Size(105, 15);
             label4.TabIndex = 3;
             label4.Text = "Categoria Cliente:";
             // 
@@ -166,9 +174,11 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label5.ForeColor = SystemColors.ButtonHighlight;
             label5.Location = new Point(31, 126);
             label5.Name = "label5";
-            label5.Size = new Size(52, 15);
+            label5.Size = new Size(56, 15);
             label5.TabIndex = 15;
             label5.Text = "Telefono";
             // 
@@ -221,7 +231,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.Black;
             ClientSize = new Size(1235, 400);
             Controls.Add(dataGridView1);
             Controls.Add(txtTelefono);
@@ -237,6 +247,8 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            ForeColor = SystemColors.ButtonHighlight;
             Name = "MantenedorCliente";
             Text = "Mantenedor Cliente";
             Load += MantenedorCliente_Load;
