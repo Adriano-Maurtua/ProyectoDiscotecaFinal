@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace ProyectoDiscotecaFinal
 {
@@ -20,27 +21,27 @@ namespace ProyectoDiscotecaFinal
         private void Reserva_Load(object sender, EventArgs e)
         {
             // Llenar el DomainUpDown con números del 1 al 12
-            for (int i = 1; i <= 12; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 domainCantidad.Items.Add(i.ToString());
             }
 
             domainCantidad.SelectedIndex = 0; // Por defecto en 1
-            domainCantidad.Wrap = false;      // No permite pasar del 12 al 1
+            domainCantidad.Wrap = false;      // No permite pasar del 10 al 1
             domainCantidad.ReadOnly = true;   // El usuario no puede escribir
-
-            int cantidadPersonas = int.Parse(domainCantidad.Text);
-
-            // Validación extra (opcional)
-            if (cantidadPersonas >= 1 && cantidadPersonas <= 12)
-            {
-                MessageBox.Show("Cantidad seleccionada: " + cantidadPersonas);
-            }
-            else
-            {
-                MessageBox.Show("La cantidad debe estar entre 1 y 12");
-            }
         }
 
+        private void domainCantidad_SelectedItemChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+            int cantidad = int.Parse(domainCantidad.Text);
+
+            Integrantes formIntegrantes = new Integrantes(cantidad);
+            formIntegrantes.Show();
+        }
     }
 }

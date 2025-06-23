@@ -39,9 +39,15 @@
             cboCategoria = new ComboBox();
             btnModificar = new Button();
             btnEliminar = new Button();
-            txtId = new TextBox();
             label5 = new Label();
             textBox4 = new TextBox();
+            dataGridView1 = new DataGridView();
+            NroDocumento = new DataGridViewTextBoxColumn();
+            Telefono = new DataGridViewTextBoxColumn();
+            NombreCompleto = new DataGridViewTextBoxColumn();
+            Genero = new DataGridViewTextBoxColumn();
+            CategoriaCliente = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -154,14 +160,6 @@
             btnEliminar.Text = "Modificar";
             btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // txtId
-            // 
-            txtId.Location = new Point(391, 15);
-            txtId.Name = "txtId";
-            txtId.Size = new Size(37, 23);
-            txtId.TabIndex = 14;
-            txtId.Visible = false;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -178,15 +176,53 @@
             textBox4.Size = new Size(248, 23);
             textBox4.TabIndex = 16;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { NroDocumento, Telefono, NombreCompleto, Genero, CategoriaCliente });
+            dataGridView1.Location = new Point(519, 26);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(691, 292);
+            dataGridView1.TabIndex = 30;
+            // 
+            // NroDocumento
+            // 
+            NroDocumento.HeaderText = "Nro Documento";
+            NroDocumento.Name = "NroDocumento";
+            NroDocumento.Width = 130;
+            // 
+            // Telefono
+            // 
+            Telefono.HeaderText = "Telefono";
+            Telefono.Name = "Telefono";
+            Telefono.Width = 110;
+            // 
+            // NombreCompleto
+            // 
+            NombreCompleto.HeaderText = "Nombre Completo";
+            NombreCompleto.Name = "NombreCompleto";
+            NombreCompleto.Width = 190;
+            // 
+            // Genero
+            // 
+            Genero.HeaderText = "Genero";
+            Genero.Name = "Genero";
+            // 
+            // CategoriaCliente
+            // 
+            CategoriaCliente.HeaderText = "Categoria";
+            CategoriaCliente.Name = "CategoriaCliente";
+            CategoriaCliente.Width = 110;
+            // 
             // MantenedorCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1358, 542);
+            ClientSize = new Size(1235, 400);
+            Controls.Add(dataGridView1);
             Controls.Add(textBox4);
             Controls.Add(label5);
-            Controls.Add(txtId);
             Controls.Add(btnEliminar);
             Controls.Add(btnModificar);
             Controls.Add(cboCategoria);
@@ -199,7 +235,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "MantenedorCliente";
-            Text = "Mantendor Cliente";
+            Text = "Mantenedor Cliente";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,8 +254,13 @@
         private ComboBox cboCategoria;
         private Button btnModificar;
         private Button btnEliminar;
-        private TextBox txtId;
         private Label label5;
         private TextBox textBox4;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn NroDocumento;
+        private DataGridViewTextBoxColumn Telefono;
+        private DataGridViewTextBoxColumn NombreCompleto;
+        private DataGridViewTextBoxColumn Genero;
+        private DataGridViewTextBoxColumn CategoriaCliente;
     }
 }

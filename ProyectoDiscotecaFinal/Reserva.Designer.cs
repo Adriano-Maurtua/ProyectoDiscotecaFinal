@@ -48,13 +48,14 @@
             label9 = new Label();
             textBox1 = new TextBox();
             label10 = new Label();
-            button1 = new Button();
             dataGridView1 = new DataGridView();
             NroDocumento = new DataGridViewTextBoxColumn();
             Telefono = new DataGridViewTextBoxColumn();
             NombreCompleto = new DataGridViewTextBoxColumn();
             Genero = new DataGridViewTextBoxColumn();
             CategoriaCliente = new DataGridViewTextBoxColumn();
+            btnVerificarPromo = new Button();
+            btnContinuar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -217,7 +218,7 @@
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new Point(44, 348);
+            monthCalendar1.Location = new Point(604, 170);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 22;
             // 
@@ -226,7 +227,7 @@
             btnDisponibilidad.BackColor = SystemColors.ButtonHighlight;
             btnDisponibilidad.FlatStyle = FlatStyle.Flat;
             btnDisponibilidad.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDisponibilidad.Location = new Point(117, 540);
+            btnDisponibilidad.Location = new Point(686, 342);
             btnDisponibilidad.Name = "btnDisponibilidad";
             btnDisponibilidad.Size = new Size(86, 27);
             btnDisponibilidad.TabIndex = 23;
@@ -236,17 +237,18 @@
             // domainCantidad
             // 
             domainCantidad.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            domainCantidad.Location = new Point(209, 605);
+            domainCantidad.Location = new Point(216, 379);
             domainCantidad.Name = "domainCantidad";
             domainCantidad.Size = new Size(52, 25);
             domainCantidad.TabIndex = 24;
+            domainCantidad.SelectedItemChanged += domainCantidad_SelectedItemChanged;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = SystemColors.ButtonHighlight;
-            label9.Location = new Point(31, 607);
+            label9.Location = new Point(24, 379);
             label9.Name = "label9";
             label9.Size = new Size(145, 17);
             label9.TabIndex = 25;
@@ -254,7 +256,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(174, 675);
+            textBox1.Location = new Point(174, 451);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(124, 23);
             textBox1.TabIndex = 26;
@@ -264,26 +266,17 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = SystemColors.ButtonHighlight;
-            label10.Location = new Point(31, 678);
+            label10.Location = new Point(24, 451);
             label10.Name = "label10";
             label10.Size = new Size(138, 17);
             label10.TabIndex = 27;
             label10.Text = "Codigo Promocional:";
             // 
-            // button1
-            // 
-            button1.Location = new Point(337, 676);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 28;
-            button1.Text = "Verificar";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { NroDocumento, Telefono, NombreCompleto, Genero, CategoriaCliente });
-            dataGridView1.Location = new Point(524, 40);
+            dataGridView1.Location = new Point(483, 25);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(542, 116);
             dataGridView1.TabIndex = 29;
@@ -313,14 +306,37 @@
             CategoriaCliente.HeaderText = "Categoria";
             CategoriaCliente.Name = "CategoriaCliente";
             // 
+            // btnVerificarPromo
+            // 
+            btnVerificarPromo.BackColor = SystemColors.ButtonHighlight;
+            btnVerificarPromo.FlatStyle = FlatStyle.Flat;
+            btnVerificarPromo.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVerificarPromo.Location = new Point(322, 451);
+            btnVerificarPromo.Name = "btnVerificarPromo";
+            btnVerificarPromo.Size = new Size(86, 27);
+            btnVerificarPromo.TabIndex = 30;
+            btnVerificarPromo.Text = "Verificar";
+            btnVerificarPromo.UseVisualStyleBackColor = false;
+            // 
+            // btnContinuar
+            // 
+            btnContinuar.Location = new Point(652, 440);
+            btnContinuar.Name = "btnContinuar";
+            btnContinuar.Size = new Size(145, 28);
+            btnContinuar.TabIndex = 31;
+            btnContinuar.Text = "Continuar";
+            btnContinuar.UseVisualStyleBackColor = true;
+            btnContinuar.Click += btnContinuar_Click;
+            // 
             // Reserva
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1333, 742);
+            ClientSize = new Size(1048, 530);
+            Controls.Add(btnContinuar);
+            Controls.Add(btnVerificarPromo);
             Controls.Add(dataGridView1);
-            Controls.Add(button1);
             Controls.Add(label10);
             Controls.Add(textBox1);
             Controls.Add(label9);
@@ -371,12 +387,13 @@
         private Label label9;
         private TextBox textBox1;
         private Label label10;
-        private Button button1;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn NroDocumento;
         private DataGridViewTextBoxColumn Telefono;
         private DataGridViewTextBoxColumn NombreCompleto;
         private DataGridViewTextBoxColumn Genero;
         private DataGridViewTextBoxColumn CategoriaCliente;
+        private Button btnVerificarPromo;
+        private Button btnContinuar;
     }
 }
